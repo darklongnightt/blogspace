@@ -37,8 +37,7 @@ header {
 }
 
 nav {
-  justify-content: end;
-  text-align: center;
+  justify-self: end;
 }
 
 nav li {
@@ -84,6 +83,7 @@ nav button {
 
 .article-detail .article {
   padding: 0;
+  margin-top: 50px;
 }
 
 .article-detail .article img {
