@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, re_path, include
 from . import views
+from articles import views as article_views
 # Allows django to define where static files are
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns, static
 from django.conf import settings
@@ -11,7 +12,7 @@ urlpatterns = [
     re_path('^articles/', include('articles.urls')),
     re_path('^accounts/', include('accounts.urls')),
     re_path('^about/$', views.about),
-    re_path('^$', views.homepage),
+    re_path('^$', article_views.article_list),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
